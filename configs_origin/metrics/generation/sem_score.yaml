@@ -1,3 +1,0 @@
-_target_: autorag_research.evaluation.metrics.generation.SemScoreConfig
-description: "Sem Score - Generated answer evaluation using cosine similarity of sentence embeddings"
-embedding_model: openai-large # You can select your own embedding model

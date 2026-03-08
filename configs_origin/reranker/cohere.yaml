@@ -1,2 +1,0 @@
-_target_: autorag_research.rerankers.cohere.CohereReranker
-model_name: rerank-v3.5
