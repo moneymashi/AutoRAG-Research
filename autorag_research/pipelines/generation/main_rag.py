@@ -80,7 +80,7 @@ class MAINRAGPipelineConfig(BaseGenerationPipelineConfig):
         config = MAINRAGPipelineConfig(
             name="main_rag_v1",
             retrieval_pipeline_name="bm25_baseline",
-            llm=ChatOpenAI(model="gpt-4o-mini").bind(logprobs=True, top_logprobs=5),
+            llm=ChatOpenAI(model="gpt-5-mini").bind(logprobs=True, top_logprobs=5),
             std_multiplier=0.0,
             top_k=20,
         )
@@ -214,7 +214,7 @@ class MAINRAGPipeline(BaseGenerationPipeline):
         )
 
         # Create MAIN-RAG pipeline with logprobs enabled
-        llm = ChatOpenAI(model="gpt-4o-mini").bind(logprobs=True, top_logprobs=5)
+        llm = ChatOpenAI(model="gpt-5-mini").bind(logprobs=True, top_logprobs=5)
         pipeline = MAINRAGPipeline(
             session_factory=session_factory,
             name="main_rag_v1",

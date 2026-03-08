@@ -212,3 +212,6 @@ __marimo__/
 
 postgresql/pgdata/
 dump_files/
+
+# Local DB config (contains credentials)
+configs/db.yaml

@@ -1,0 +1,17 @@
+# BM25 Retrieval Pipeline Configuration
+#
+# Uses VectorChord-BM25 for full-text BM25 retrieval from PostgreSQL.
+#
+# Parameters:
+#   tokenizer: Tokenizer for BM25 sparse retrieval (default: "bert")
+#   top_k: Number of results to retrieve (default: 10)
+#
+_target_: autorag_research.pipelines.retrieval.bm25.BM25PipelineConfig
+description: "BM25 retrieval with VectorChord-BM25"
+name: bm25
+tokenizer: bert
+top_k: 10
+batch_size: 128
+max_concurrency: 16
+max_retries: 3
+retry_delay: 1.0
